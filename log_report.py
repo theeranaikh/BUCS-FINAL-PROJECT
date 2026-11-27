@@ -57,3 +57,22 @@ def format_statement(record):
         f'ทดสอบโมเดล {record["model"]} ด้วยอินพุต {input_text} '
         f'ได้ผลลัพธ์ {record["output"]} คาดไว้ {record["expected"]} [{status}]'
     )
+
+
+def print_report(records):
+    print("รายงานผลการทดสอบโมเดล")
+    print(f"อ่านผลทดสอบได้ {len(records)} รายการ")
+    if not records:
+        return
+
+    print("\nสรุปตามโมเดล")
+    for model, counts in sorted(summarize_by_model(records).items()):
+        print(f'{model} | ผ่าน {counts["passed"]} | ไม่ผ่าน {counts["failed"]}')
+
+    print("\nรายละเอียดการทดสอบ")
+    for record in records:
+        print(format_statement(record))
+
+
+if __name__ == "__main__":
+    print_report(read_log())
