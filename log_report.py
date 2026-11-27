@@ -37,3 +37,12 @@ def read_log(path=LOG_FILE):
 
 def test_passed(record):
     return record["output"] == record["expected"]
+
+
+def summarize_by_model(records):
+    summary = {}
+    for record in records:
+        counts = summary.setdefault(record["model"], {"passed": 0, "failed": 0})
+        status = "passed" if test_passed(record) else "failed"
+        counts[status] += 1
+    return summary
