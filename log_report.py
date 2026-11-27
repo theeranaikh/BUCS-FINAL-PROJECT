@@ -5,6 +5,7 @@ from pathlib import Path
 
 
 LOG_FILE = Path(__file__).with_name("results.txt")
+REPORT_FILE = LOG_FILE.with_name("report.txt")
 
 
 def parse_log_line(line):
@@ -59,20 +60,24 @@ def format_statement(record):
     )
 
 
-def print_report(records):
-    print("รายงานผลการทดสอบโมเดล")
-    print(f"อ่านผลทดสอบได้ {len(records)} รายการ")
+def print_report(records, file=None, *, limit=None):
+    print("รายงานผลการทดสอบโมเดล", file=file)
+    print(f"อ่านผลทดสอบได้ {len(records)} รายการ", file=file)
     if not records:
         return
 
-    print("\nสรุปตามโมเดล")
+    print("\nสรุปตามโมเดล", file=file)
     for model, counts in sorted(summarize_by_model(records).items()):
-        print(f'{model} | ผ่าน {counts["passed"]} | ไม่ผ่าน {counts["failed"]}')
+        print(f'{model} | ผ่าน {counts["passed"]} | ไม่ผ่าน {counts["failed"]}', file=file)
 
-    print("\nรายละเอียดการทดสอบ")
-    for record in records:
-        print(format_statement(record))
+    details = records[:limit]
+    print(f"\nรายละเอียดการทดสอบ ({len(details)} จาก {len(records)} รายการ)", file=file)
+    for record in details:
+        print(format_statement(record), file=file)
 
 
 if __name__ == "__main__":
-    print_report(read_log())
+    records = read_log()
+    with REPORT_FILE.open("w", encoding="utf-8") as report:
+        print_report(records, file=report)
+    print_report(records, limit=20)
