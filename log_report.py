@@ -33,3 +33,7 @@ def read_log(path=LOG_FILE):
             except ValueError:
                 print(f"ข้ามบรรทัดที่ {number} ใน {path.name} เพราะรูปแบบไม่ถูกต้อง", file=sys.stderr)
     return records
+
+
+def test_passed(record):
+    return record["output"] == record["expected"]
