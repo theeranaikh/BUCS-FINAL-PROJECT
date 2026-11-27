@@ -46,3 +46,14 @@ def summarize_by_model(records):
         status = "passed" if test_passed(record) else "failed"
         counts[status] += 1
     return summary
+
+
+def format_statement(record):
+    tested_at = record["timestamp"]
+    status = "ผ่าน" if test_passed(record) else "ไม่ผ่าน"
+    input_text = json.dumps(record["input"], ensure_ascii=False)
+    return (
+        f'วันที่ {tested_at:%Y-%m-%d} เวลา {tested_at:%H:%M:%S} '
+        f'ทดสอบโมเดล {record["model"]} ด้วยอินพุต {input_text} '
+        f'ได้ผลลัพธ์ {record["output"]} คาดไว้ {record["expected"]} [{status}]'
+    )
