@@ -15,3 +15,12 @@ def format_statement(result):
         f'ทดสอบโมเดล {result["model"]} ด้วยอินพุต {input_text} '
         f'ได้ผลลัพธ์ {result["output"]}'
     )
+
+
+def print_statements(path=RESULTS_FILE):
+    for result in read_results(path):
+        print(format_statement(result))
+
+
+if __name__ == "__main__":
+    print_statements()
