@@ -1,0 +1,2 @@
+{"date": "2026-11-27", "time": "18:17:33", "model": "word-count", "input": "Hello world", "output": 2}
+{"date": "2026-11-27", "time": "18:17:33", "model": "word-count", "input": "ทดสอบ โมเดล Python", "output": 3}

@@ -1,4 +1,9 @@
+import json
 from datetime import datetime
+from pathlib import Path
+
+
+RESULTS_FILE = Path(__file__).with_name("results.txt")
 
 
 def count_words(input_text):
@@ -14,3 +19,8 @@ def create_result(input_text):
         "input": input_text,
         "output": count_words(input_text),
     }
+
+
+def save_result(result, path=RESULTS_FILE):
+    with open(path, "a", encoding="utf-8") as file:
+        file.write(json.dumps(result, ensure_ascii=False) + "\n")
