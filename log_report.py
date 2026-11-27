@@ -1,5 +1,10 @@
 import json
+import sys
 from datetime import datetime
+from pathlib import Path
+
+
+LOG_FILE = Path(__file__).with_name("results.txt")
 
 
 def parse_log_line(line):
@@ -14,3 +19,17 @@ def parse_log_line(line):
         "output": int(output),
         "expected": int(expected),
     }
+
+
+def read_log(path=LOG_FILE):
+    path = Path(path)
+    records = []
+    with open(path, encoding="utf-8") as file:
+        for number, line in enumerate(file, start=1):
+            if not line.strip():
+                continue
+            try:
+                records.append(parse_log_line(line))
+            except ValueError:
+                print(f"ข้ามบรรทัดที่ {number} ใน {path.name} เพราะรูปแบบไม่ถูกต้อง", file=sys.stderr)
+    return records
