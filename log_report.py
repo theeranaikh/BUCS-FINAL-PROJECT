@@ -2,6 +2,7 @@ import json
 import sys
 from datetime import datetime
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from unicodedata import category, east_asian_width
 
 
@@ -87,7 +88,7 @@ def print_table(headers, rows, *, file=None, right_aligned=()):
             print("-+-".join("-" * width for width in widths), file=file)
 
 
-def print_report(records, file=None, *, limit=None):
+def print_report(records, file=None, *, limit=None, numbered=False):
     print("รายงานผลการทดสอบโมเดล", file=file)
     print(f"อ่านผลทดสอบได้ {len(records)} รายการ", file=file)
     if not records:
@@ -102,16 +103,82 @@ def print_report(records, file=None, *, limit=None):
 
     details = records[:limit]
     print(f"\nรายละเอียดการทดสอบ ({len(details)} จาก {len(records)} รายการ)", file=file)
-    print_table(
-        ("วันที่", "เวลา", "โมเดล", "ผลลัพธ์", "คาดไว้", "สถานะ", "อินพุต"),
-        [detail_row(record) for record in details],
-        file=file,
-        right_aligned=(3, 4),
-    )
+    headers = ("วันที่", "เวลา", "โมเดล", "ผลลัพธ์", "คาดไว้", "สถานะ", "อินพุต")
+    rows = [detail_row(record) for record in details]
+    if numbered:
+        rows = [(str(number), *row) for number, row in enumerate(rows, start=1)]
+        print_table(("เลข", *headers), rows, file=file, right_aligned=(0, 4, 5))
+    else:
+        print_table(headers, rows, file=file, right_aligned=(3, 4))
+
+
+def main():
+    records = []
+    while True:
+        print(f"\nจัดการ Log ({len(records)} รายการ)")
+        print("1 เปิดไฟล์ log   2 ดูรายงาน   3 เพิ่ม   4 ลบ   5 แก้ไข   0 ออก")
+        try:
+            choices = input("เลือกเมนู > ").strip().split(maxsplit=1)
+            if not choices:
+                continue
+            command = choices[0]
+            argument = choices[1] if len(choices) == 2 else ""
+            if command == "0":
+                return
+            if command == "2":
+                print_report(records, limit=20, numbered=True)
+                continue
+
+            if command == "1":
+                filename = argument or input("ชื่อไฟล์ log > ").strip()
+                if not filename:
+                    raise ValueError("กรุณาระบุชื่อไฟล์ log")
+                path = Path(filename.strip('"')).expanduser()
+                if path.resolve() == REPORT_FILE.resolve():
+                    raise ValueError("กรุณาเลือกไฟล์ log ดิบ")
+                updated = read_log(path)
+            elif command in {"3", "4", "5"}:
+                updated = records.copy()
+                if command in {"4", "5"}:
+                    if not records:
+                        raise ValueError("ยังไม่มีรายการให้ลบหรือแก้ไข")
+                    number = int(argument or input("เลขรายการจากรายงาน > "))
+                    if not 1 <= number <= len(records):
+                        raise ValueError(f"กรุณาใช้เลขรายการ 1 ถึง {len(records)}")
+                    if command == "4":
+                        del updated[number - 1]
+
+                if command in {"3", "5"}:
+                    default_time = (
+                        records[number - 1]["timestamp"] if command == "5" else datetime.now()
+                    ).isoformat(timespec="seconds")
+                    timestamp = input(f"วันและเวลา [{default_time}] > ").strip() or default_time
+                    model = input("ชื่อโมเดล > ").strip()
+                    output = input("ผลลัพธ์ (จำนวนเต็ม) > ").strip()
+                    expected = input("ค่าที่คาดไว้ (จำนวนเต็ม) > ").strip()
+                    text = json.dumps(input("อินพุต > "), ensure_ascii=False)
+                    record = parse_log_line(f"{timestamp}|{model}|{output}|{expected}|{text}")
+                    if command == "3":
+                        updated.append(record)
+                    else:
+                        updated[number - 1] = record
+            else:
+                raise ValueError("กรุณาเลือกเมนู 0 ถึง 5")
+
+            with TemporaryDirectory(dir=REPORT_FILE.parent) as directory:
+                temporary_report = Path(directory) / REPORT_FILE.name
+                with temporary_report.open("w", encoding="utf-8") as report:
+                    print_report(updated, file=report, numbered=True)
+                temporary_report.replace(REPORT_FILE)
+            records = updated
+            print_report(records, limit=20, numbered=True)
+            print(f"บันทึกรายงานใน {REPORT_FILE.name} แล้ว")
+        except (OSError, ValueError) as error:
+            print(f"ทำรายการไม่สำเร็จ ({error})")
+        except (EOFError, KeyboardInterrupt):
+            print()
+            return
 
 
 if __name__ == "__main__":
-    records = read_log()
-    with REPORT_FILE.open("w", encoding="utf-8") as report:
-        print_report(records, file=report)
-    print_report(records, limit=20)
+    main()
