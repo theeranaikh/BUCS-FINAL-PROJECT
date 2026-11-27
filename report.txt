@@ -2,179 +2,183 @@
 อ่านผลทดสอบได้ 164 รายการ
 
 สรุปตามโมเดล
-char-count | ผ่าน 14 | ไม่ผ่าน 4
-digit-count | ผ่าน 13 | ไม่ผ่าน 3
-integer-token-count | ผ่าน 13 | ไม่ผ่าน 3
-line-count | ผ่าน 13 | ไม่ผ่าน 3
-pipe-count | ผ่าน 13 | ไม่ผ่าน 3
-unique-word-count | ผ่าน 13 | ไม่ผ่าน 3
-uppercase-count | ผ่าน 12 | ไม่ผ่าน 4
-utf8-byte-count | ผ่าน 13 | ไม่ผ่าน 3
-whitespace-count | ผ่าน 13 | ไม่ผ่าน 3
-word-count | ผ่าน 14 | ไม่ผ่าน 4
+โมเดล               | ผ่าน | ไม่ผ่าน
+--------------------+-----+------
+char-count          |  14 |     4
+digit-count         |  13 |     3
+integer-token-count |  13 |     3
+line-count          |  13 |     3
+pipe-count          |  13 |     3
+unique-word-count   |  13 |     3
+uppercase-count     |  12 |     4
+utf8-byte-count     |  13 |     3
+whitespace-count    |  13 |     3
+word-count          |  14 |     4
 
 รายละเอียดการทดสอบ (164 จาก 164 รายการ)
-วันที่ 2026-11-27 เวลา 18:17:33 ทดสอบโมเดล word-count ด้วยอินพุต "Hello world" ได้ผลลัพธ์ 2 คาดไว้ 2 [ผ่าน]
-วันที่ 2026-11-27 เวลา 18:17:33 ทดสอบโมเดล word-count ด้วยอินพุต "ทดสอบ โมเดล Python" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-27 เวลา 18:18:04 ทดสอบโมเดล char-count ด้วยอินพุต "A|B" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-27 เวลา 18:18:12 ทดสอบโมเดล char-count ด้วยอินพุต "ABC" ได้ผลลัพธ์ 2 คาดไว้ 3 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 07:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 07:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 07:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 07:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 07:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 07:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 07:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 07:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 07:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 07:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 6 คาดไว้ 6 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 6 คาดไว้ 6 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 0 คาดไว้ 1 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 12:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 6 คาดไว้ 6 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 12:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 12:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "   \t  " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 18 คาดไว้ 17 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 17:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 17 คาดไว้ 17 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 3 คาดไว้ 2 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 17:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-24 เวลา 17:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "Hello, world! 123" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 24 คาดไว้ 24 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 66 คาดไว้ 66 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 3 คาดไว้ 4 [ไม่ผ่าน]
-วันที่ 2026-11-24 เวลา 22:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-24 เวลา 22:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙" ได้ผลลัพธ์ 3 คาดไว้ 4 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 03:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 03:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 27 คาดไว้ 27 [ผ่าน]
-วันที่ 2026-11-25 เวลา 03:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 28 คาดไว้ 27 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 03:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 03:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 03:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-25 เวลา 03:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 03:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 3 คาดไว้ 2 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 03:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 03:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "Model|version=2|status=\"OK\"" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 5 คาดไว้ 6 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 08:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 34 คาดไว้ 34 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 34 คาดไว้ 34 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 08:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 6 คาดไว้ 6 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 08:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "first line\r\nsecond line\nthird line" ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 26 คาดไว้ 26 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 26 คาดไว้ 26 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 2 คาดไว้ 1 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 13:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 13:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 13:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "path=C:\\logs\\model\\run.txt" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 22 คาดไว้ 23 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 18:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 60 คาดไว้ 60 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 1 คาดไว้ 2 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 18:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 18:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "emoji 🤖👩‍💻👍🏽 และภาษาไทย" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 17 คาดไว้ 17 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 21 คาดไว้ 21 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-25 เวลา 23:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 2 คาดไว้ 2 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-25 เวลา 23:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "café café résumé" ได้ผลลัพธ์ 4 คาดไว้ 3 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 04:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-26 เวลา 04:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 40 คาดไว้ 40 [ผ่าน]
-วันที่ 2026-11-26 เวลา 04:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 39 คาดไว้ 40 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 04:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 04:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 8 คาดไว้ 8 [ผ่าน]
-วันที่ 2026-11-26 เวลา 04:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 04:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 2 คาดไว้ 2 [ผ่าน]
-วันที่ 2026-11-26 เวลา 04:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 04:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-26 เวลา 04:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "ref=A-001; temperature=-12.50; retries=0" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 5 คาดไว้ 4 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 09:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 33 คาดไว้ 33 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 36 คาดไว้ 36 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 09:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-26 เวลา 09:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "zero​width and non-breaking space" ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 23 คาดไว้ 23 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 38 คาดไว้ 38 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 0 คาดไว้ 1 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 14:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 2 คาดไว้ 2 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-26 เวลา 14:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 0 คาดไว้ 1 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 14:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "中文測試 العربية English 42" ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 37 คาดไว้ 36 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 19:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 36 คาดไว้ 36 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-26 เวลา 19:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-26 เวลา 19:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 24 คาดไว้ 24 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 24 คาดไว้ 24 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 2 คาดไว้ 3 [ไม่ผ่าน]
-วันที่ 2026-11-27 เวลา 00:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 11 คาดไว้ 11 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-27 เวลา 00:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "UPPER lower MiXeD ABC123" ได้ผลลัพธ์ 3 คาดไว้ 4 [ไม่ผ่าน]
-วันที่ 2026-11-27 เวลา 05:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 5 คาดไว้ 5 [ผ่าน]
-วันที่ 2026-11-27 เวลา 05:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 38 คาดไว้ 38 [ผ่าน]
-วันที่ 2026-11-27 เวลา 05:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 39 คาดไว้ 38 [ไม่ผ่าน]
-วันที่ 2026-11-27 เวลา 05:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-27 เวลา 05:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-27 เวลา 05:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-27 เวลา 05:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 10 คาดไว้ 10 [ผ่าน]
-วันที่ 2026-11-27 เวลา 05:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 1 คาดไว้ 0 [ไม่ผ่าน]
-วันที่ 2026-11-27 เวลา 05:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-27 เวลา 05:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "   leading space\tand trailing space   " ได้ผลลัพธ์ 4 คาดไว้ 4 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:15:08 ทดสอบโมเดล word-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 0 คาดไว้ 1 [ไม่ผ่าน]
-วันที่ 2026-11-27 เวลา 10:15:45 ทดสอบโมเดล char-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 135 คาดไว้ 135 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:16:22 ทดสอบโมเดล utf8-byte-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 135 คาดไว้ 135 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:16:59 ทดสอบโมเดล line-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:17:36 ทดสอบโมเดล digit-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 36 คาดไว้ 36 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:18:13 ทดสอบโมเดล uppercase-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 2 คาดไว้ 3 [ไม่ผ่าน]
-วันที่ 2026-11-27 เวลา 10:18:50 ทดสอบโมเดล whitespace-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 0 คาดไว้ 0 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:19:27 ทดสอบโมเดล pipe-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 12 คาดไว้ 12 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:20:04 ทดสอบโมเดล integer-token-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 12 คาดไว้ 12 [ผ่าน]
-วันที่ 2026-11-27 เวลา 10:20:41 ทดสอบโมเดล unique-word-count ด้วยอินพุต "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END" ได้ผลลัพธ์ 1 คาดไว้ 1 [ผ่าน]
+วันที่        | เวลา     | โมเดล               | ผลลัพธ์ | คาดไว้ | สถานะ | อินพุต
+-----------+----------+---------------------+-------+-------+-------+-----
+2026-11-27 | 18:17:33 | word-count          |     2 |     2 | ผ่าน   | "Hello world"
+2026-11-27 | 18:17:33 | word-count          |     3 |     3 | ผ่าน   | "ทดสอบ โมเดล Python"
+2026-11-27 | 18:18:04 | char-count          |     3 |     3 | ผ่าน   | "A|B"
+2026-11-27 | 18:18:12 | char-count          |     2 |     3 | ไม่ผ่าน | "ABC"
+2026-11-24 | 07:15:08 | word-count          |     1 |     0 | ไม่ผ่าน | ""
+2026-11-24 | 07:15:45 | char-count          |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 07:16:22 | utf8-byte-count     |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 07:16:59 | line-count          |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 07:17:36 | digit-count         |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 07:18:13 | uppercase-count     |     1 |     0 | ไม่ผ่าน | ""
+2026-11-24 | 07:18:50 | whitespace-count    |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 07:19:27 | pipe-count          |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 07:20:04 | integer-token-count |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 07:20:41 | unique-word-count   |     0 |     0 | ผ่าน   | ""
+2026-11-24 | 12:15:08 | word-count          |     0 |     0 | ผ่าน   | "   \t  "
+2026-11-24 | 12:15:45 | char-count          |     6 |     6 | ผ่าน   | "   \t  "
+2026-11-24 | 12:16:22 | utf8-byte-count     |     6 |     6 | ผ่าน   | "   \t  "
+2026-11-24 | 12:16:59 | line-count          |     0 |     1 | ไม่ผ่าน | "   \t  "
+2026-11-24 | 12:17:36 | digit-count         |     0 |     0 | ผ่าน   | "   \t  "
+2026-11-24 | 12:18:13 | uppercase-count     |     0 |     0 | ผ่าน   | "   \t  "
+2026-11-24 | 12:18:50 | whitespace-count    |     6 |     6 | ผ่าน   | "   \t  "
+2026-11-24 | 12:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "   \t  "
+2026-11-24 | 12:20:04 | integer-token-count |     1 |     0 | ไม่ผ่าน | "   \t  "
+2026-11-24 | 12:20:41 | unique-word-count   |     0 |     0 | ผ่าน   | "   \t  "
+2026-11-24 | 17:15:08 | word-count          |     3 |     3 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 17:15:45 | char-count          |    18 |    17 | ไม่ผ่าน | "Hello, world! 123"
+2026-11-24 | 17:16:22 | utf8-byte-count     |    17 |    17 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 17:16:59 | line-count          |     1 |     1 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 17:17:36 | digit-count         |     3 |     3 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 17:18:13 | uppercase-count     |     1 |     1 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 17:18:50 | whitespace-count    |     3 |     2 | ไม่ผ่าน | "Hello, world! 123"
+2026-11-24 | 17:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 17:20:04 | integer-token-count |     1 |     1 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 17:20:41 | unique-word-count   |     3 |     3 | ผ่าน   | "Hello, world! 123"
+2026-11-24 | 22:15:08 | word-count          |     4 |     4 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:15:45 | char-count          |    24 |    24 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:16:22 | utf8-byte-count     |    66 |    66 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:16:59 | line-count          |     1 |     1 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:17:36 | digit-count         |     3 |     4 | ไม่ผ่าน | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:18:13 | uppercase-count     |     0 |     0 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:18:50 | whitespace-count    |     3 |     3 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:20:04 | integer-token-count |     0 |     0 | ผ่าน   | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-24 | 22:20:41 | unique-word-count   |     3 |     4 | ไม่ผ่าน | "ทดสอบ โมเดล ภาษาไทย ๒๕๖๙"
+2026-11-25 | 03:15:08 | word-count          |     1 |     1 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:15:45 | char-count          |    27 |    27 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:16:22 | utf8-byte-count     |    28 |    27 | ไม่ผ่าน | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:16:59 | line-count          |     1 |     1 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:17:36 | digit-count         |     1 |     1 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:18:13 | uppercase-count     |     3 |     3 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:18:50 | whitespace-count    |     0 |     0 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:19:27 | pipe-count          |     3 |     2 | ไม่ผ่าน | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:20:04 | integer-token-count |     1 |     1 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 03:20:41 | unique-word-count   |     1 |     1 | ผ่าน   | "Model|version=2|status=\"OK\""
+2026-11-25 | 08:15:08 | word-count          |     5 |     6 | ไม่ผ่าน | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:15:45 | char-count          |    34 |    34 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:16:22 | utf8-byte-count     |    34 |    34 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:16:59 | line-count          |     3 |     3 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:17:36 | digit-count         |     0 |     0 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:18:13 | uppercase-count     |     1 |     0 | ไม่ผ่าน | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:18:50 | whitespace-count    |     6 |     6 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:20:04 | integer-token-count |     0 |     0 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 08:20:41 | unique-word-count   |     4 |     4 | ผ่าน   | "first line\r\nsecond line\nthird line"
+2026-11-25 | 13:15:08 | word-count          |     1 |     1 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:15:45 | char-count          |    26 |    26 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:16:22 | utf8-byte-count     |    26 |    26 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:16:59 | line-count          |     2 |     1 | ไม่ผ่าน | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:17:36 | digit-count         |     0 |     0 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:18:13 | uppercase-count     |     1 |     1 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:18:50 | whitespace-count    |     0 |     0 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:20:04 | integer-token-count |     1 |     0 | ไม่ผ่าน | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 13:20:41 | unique-word-count   |     1 |     1 | ผ่าน   | "path=C:\\logs\\model\\run.txt"
+2026-11-25 | 18:15:08 | word-count          |     3 |     3 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:15:45 | char-count          |    22 |    23 | ไม่ผ่าน | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:16:22 | utf8-byte-count     |    60 |    60 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:16:59 | line-count          |     1 |     1 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:17:36 | digit-count         |     0 |     0 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:18:13 | uppercase-count     |     0 |     0 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:18:50 | whitespace-count    |     1 |     2 | ไม่ผ่าน | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:20:04 | integer-token-count |     0 |     0 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 18:20:41 | unique-word-count   |     3 |     3 | ผ่าน   | "emoji 🤖👩‍💻👍🏽 และภาษาไทย"
+2026-11-25 | 23:15:08 | word-count          |     3 |     3 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:15:45 | char-count          |    17 |    17 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:16:22 | utf8-byte-count     |    21 |    21 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:16:59 | line-count          |     1 |     1 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:17:36 | digit-count         |     1 |     0 | ไม่ผ่าน | "café café résumé"
+2026-11-25 | 23:18:13 | uppercase-count     |     0 |     0 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:18:50 | whitespace-count    |     2 |     2 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:20:04 | integer-token-count |     0 |     0 | ผ่าน   | "café café résumé"
+2026-11-25 | 23:20:41 | unique-word-count   |     4 |     3 | ไม่ผ่าน | "café café résumé"
+2026-11-26 | 04:15:08 | word-count          |     3 |     3 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:15:45 | char-count          |    40 |    40 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:16:22 | utf8-byte-count     |    39 |    40 | ไม่ผ่าน | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:16:59 | line-count          |     1 |     1 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:17:36 | digit-count         |     8 |     8 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:18:13 | uppercase-count     |     1 |     1 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:18:50 | whitespace-count    |     2 |     2 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:19:27 | pipe-count          |     1 |     0 | ไม่ผ่าน | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:20:04 | integer-token-count |     4 |     4 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 04:20:41 | unique-word-count   |     3 |     3 | ผ่าน   | "ref=A-001; temperature=-12.50; retries=0"
+2026-11-26 | 09:15:08 | word-count          |     5 |     4 | ไม่ผ่าน | "zero​width and non-breaking space"
+2026-11-26 | 09:15:45 | char-count          |    33 |    33 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 09:16:22 | utf8-byte-count     |    36 |    36 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 09:16:59 | line-count          |     1 |     1 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 09:17:36 | digit-count         |     0 |     0 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 09:18:13 | uppercase-count     |     1 |     0 | ไม่ผ่าน | "zero​width and non-breaking space"
+2026-11-26 | 09:18:50 | whitespace-count    |     3 |     3 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 09:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 09:20:04 | integer-token-count |     0 |     0 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 09:20:41 | unique-word-count   |     4 |     4 | ผ่าน   | "zero​width and non-breaking space"
+2026-11-26 | 14:15:08 | word-count          |     4 |     4 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 14:15:45 | char-count          |    23 |    23 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 14:16:22 | utf8-byte-count     |    38 |    38 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 14:16:59 | line-count          |     0 |     1 | ไม่ผ่าน | "中文測試 العربية English 42"
+2026-11-26 | 14:17:36 | digit-count         |     2 |     2 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 14:18:13 | uppercase-count     |     1 |     1 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 14:18:50 | whitespace-count    |     3 |     3 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 14:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 14:20:04 | integer-token-count |     0 |     1 | ไม่ผ่าน | "中文測試 العربية English 42"
+2026-11-26 | 14:20:41 | unique-word-count   |     4 |     4 | ผ่าน   | "中文測試 العربية English 42"
+2026-11-26 | 19:15:08 | word-count          |     1 |     1 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:15:45 | char-count          |    37 |    36 | ไม่ผ่าน | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:16:22 | utf8-byte-count     |    36 |    36 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:16:59 | line-count          |     1 |     1 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:17:36 | digit-count         |     1 |     1 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:18:13 | uppercase-count     |     0 |     0 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:18:50 | whitespace-count    |     1 |     0 | ไม่ผ่าน | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:19:27 | pipe-count          |     1 |     1 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:20:04 | integer-token-count |     1 |     1 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-26 | 19:20:41 | unique-word-count   |     1 |     1 | ผ่าน   | "payload={\"run\":7,\"tags\":[\"a|b\",\"c\"]}"
+2026-11-27 | 00:15:08 | word-count          |     4 |     4 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:15:45 | char-count          |    24 |    24 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:16:22 | utf8-byte-count     |    24 |    24 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:16:59 | line-count          |     1 |     1 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:17:36 | digit-count         |     2 |     3 | ไม่ผ่าน | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:18:13 | uppercase-count     |    11 |    11 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:18:50 | whitespace-count    |     3 |     3 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:19:27 | pipe-count          |     0 |     0 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:20:04 | integer-token-count |     1 |     1 | ผ่าน   | "UPPER lower MiXeD ABC123"
+2026-11-27 | 00:20:41 | unique-word-count   |     3 |     4 | ไม่ผ่าน | "UPPER lower MiXeD ABC123"
+2026-11-27 | 05:15:08 | word-count          |     5 |     5 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 05:15:45 | char-count          |    38 |    38 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 05:16:22 | utf8-byte-count     |    39 |    38 | ไม่ผ่าน | "   leading space\tand trailing space   "
+2026-11-27 | 05:16:59 | line-count          |     1 |     1 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 05:17:36 | digit-count         |     0 |     0 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 05:18:13 | uppercase-count     |     0 |     0 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 05:18:50 | whitespace-count    |    10 |    10 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 05:19:27 | pipe-count          |     1 |     0 | ไม่ผ่าน | "   leading space\tand trailing space   "
+2026-11-27 | 05:20:04 | integer-token-count |     0 |     0 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 05:20:41 | unique-word-count   |     4 |     4 | ผ่าน   | "   leading space\tand trailing space   "
+2026-11-27 | 10:15:08 | word-count          |     0 |     1 | ไม่ผ่าน | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:15:45 | char-count          |   135 |   135 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:16:22 | utf8-byte-count     |   135 |   135 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:16:59 | line-count          |     1 |     1 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:17:36 | digit-count         |    36 |    36 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:18:13 | uppercase-count     |     2 |     3 | ไม่ผ่าน | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:18:50 | whitespace-count    |     0 |     0 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:19:27 | pipe-count          |    12 |    12 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:20:04 | integer-token-count |    12 |    12 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"
+2026-11-27 | 10:20:41 | unique-word-count   |     1 |     1 | ผ่าน   | "repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|repeat=001|END"

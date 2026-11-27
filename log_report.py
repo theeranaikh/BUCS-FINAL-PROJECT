@@ -2,6 +2,7 @@ import json
 import sys
 from datetime import datetime
 from pathlib import Path
+from unicodedata import category, east_asian_width
 
 
 LOG_FILE = Path(__file__).with_name("results.txt")
@@ -49,15 +50,41 @@ def summarize_by_model(records):
     return summary
 
 
-def format_statement(record):
+def detail_row(record):
     tested_at = record["timestamp"]
     status = "ผ่าน" if test_passed(record) else "ไม่ผ่าน"
-    input_text = json.dumps(record["input"], ensure_ascii=False)
     return (
-        f'วันที่ {tested_at:%Y-%m-%d} เวลา {tested_at:%H:%M:%S} '
-        f'ทดสอบโมเดล {record["model"]} ด้วยอินพุต {input_text} '
-        f'ได้ผลลัพธ์ {record["output"]} คาดไว้ {record["expected"]} [{status}]'
+        f"{tested_at:%Y-%m-%d}",
+        f"{tested_at:%H:%M:%S}",
+        record["model"],
+        str(record["output"]),
+        str(record["expected"]),
+        status,
+        json.dumps(record["input"], ensure_ascii=False),
     )
+
+
+def print_table(headers, rows, *, file=None, right_aligned=()):
+    def display_width(text):
+        # shortcut: estimate character widths, use grapheme widths if model names need emoji clusters.
+        return sum(
+            2 if east_asian_width(character) in {"W", "F"} else 1
+            for character in text
+            if category(character) not in {"Mn", "Me", "Cf"}
+        )
+
+    values = [headers, *rows]
+    widths = [max(map(display_width, column)) for column in zip(*values)]
+    if len(headers) - 1 not in right_aligned:
+        widths[-1] = display_width(headers[-1])
+    for row_number, row in enumerate(values):
+        cells = []
+        for index, text in enumerate(row):
+            padding = " " * (widths[index] - display_width(text))
+            cells.append(padding + text if index in right_aligned else text + padding)
+        print(" | ".join(cells).rstrip(), file=file)
+        if row_number == 0:
+            print("-+-".join("-" * width for width in widths), file=file)
 
 
 def print_report(records, file=None, *, limit=None):
@@ -67,13 +94,20 @@ def print_report(records, file=None, *, limit=None):
         return
 
     print("\nสรุปตามโมเดล", file=file)
-    for model, counts in sorted(summarize_by_model(records).items()):
-        print(f'{model} | ผ่าน {counts["passed"]} | ไม่ผ่าน {counts["failed"]}', file=file)
+    summary = [
+        (model, str(counts["passed"]), str(counts["failed"]))
+        for model, counts in sorted(summarize_by_model(records).items())
+    ]
+    print_table(("โมเดล", "ผ่าน", "ไม่ผ่าน"), summary, file=file, right_aligned=(1, 2))
 
     details = records[:limit]
     print(f"\nรายละเอียดการทดสอบ ({len(details)} จาก {len(records)} รายการ)", file=file)
-    for record in details:
-        print(format_statement(record), file=file)
+    print_table(
+        ("วันที่", "เวลา", "โมเดล", "ผลลัพธ์", "คาดไว้", "สถานะ", "อินพุต"),
+        [detail_row(record) for record in details],
+        file=file,
+        right_aligned=(3, 4),
+    )
 
 
 if __name__ == "__main__":

@@ -24,10 +24,16 @@ class LogReportTest(unittest.TestCase):
 
         self.assertIn("บรรทัดที่ 2", warnings.getvalue())
         self.assertIn("อ่านผลทดสอบได้ 3 รายการ", report.getvalue())
-        self.assertIn("char-count | ผ่าน 1 | ไม่ผ่าน 1", report.getvalue())
-        self.assertIn("word-count | ผ่าน 1 | ไม่ผ่าน 0", report.getvalue())
-        self.assertIn('"A|B" ได้ผลลัพธ์ 3 คาดไว้ 3 [ผ่าน]', report.getvalue())
-        self.assertIn('"ABC" ได้ผลลัพธ์ 2 คาดไว้ 3 [ไม่ผ่าน]', report.getvalue())
+        summary = report.getvalue().split("สรุปตามโมเดล\n", 1)[1].split("\n\n", 1)[0]
+        header, _, first, second = summary.splitlines()
+        self.assertEqual([cell.strip() for cell in header.split("|")], ["โมเดล", "ผ่าน", "ไม่ผ่าน"])
+        self.assertEqual([cell.strip() for cell in first.split("|")], ["char-count", "1", "1"])
+        self.assertEqual([cell.strip() for cell in second.split("|")], ["word-count", "1", "0"])
+        details = report.getvalue().splitlines()[-3:]
+        passed = [cell.strip() for cell in details[1].split(" | ", 6)]
+        failed = [cell.strip() for cell in details[2].split(" | ", 6)]
+        self.assertEqual(passed, ["2026-11-27", "18:18:04", "char-count", "3", "3", "ผ่าน", '"A|B"'])
+        self.assertEqual(failed, ["2026-11-27", "18:18:12", "char-count", "2", "3", "ไม่ผ่าน", '"ABC"'])
 
     def test_report_limits_details_but_summarizes_all_records(self):
         records = [
@@ -38,14 +44,15 @@ class LogReportTest(unittest.TestCase):
         print_report(records, file=report, limit=20)
 
         lines = report.getvalue().splitlines()
-        self.assertIn("word-count | ผ่าน 21 | ไม่ผ่าน 0", lines)
+        summary_row = lines[6]
+        self.assertEqual([cell.strip() for cell in summary_row.split("|")], ["word-count", "21", "0"])
         heading = lines.index("รายละเอียดการทดสอบ (20 จาก 21 รายการ)")
-        self.assertEqual(len(lines[heading + 1:]), 20)
+        self.assertEqual(len(lines[heading + 3:]), 20)
         self.assertIn('"case-19"', lines[-1])
 
         full_report = StringIO()
         print_report(records, file=full_report)
         full_lines = full_report.getvalue().splitlines()
         heading = full_lines.index("รายละเอียดการทดสอบ (21 จาก 21 รายการ)")
-        self.assertEqual(len(full_lines[heading + 1:]), 21)
+        self.assertEqual(len(full_lines[heading + 3:]), 21)
         self.assertIn('"case-20"', full_lines[-1])
