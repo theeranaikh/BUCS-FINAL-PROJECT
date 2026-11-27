@@ -1,2 +1,4 @@
-{"date": "2026-11-27", "time": "18:17:33", "model": "word-count", "input": "Hello world", "output": 2}
-{"date": "2026-11-27", "time": "18:17:33", "model": "word-count", "input": "ทดสอบ โมเดล Python", "output": 3}
+2026-11-27T18:17:33|word-count|2|2|"Hello world"
+2026-11-27T18:17:33|word-count|3|3|"ทดสอบ โมเดล Python"
+2026-11-27T18:18:04|char-count|3|3|"A|B"
+2026-11-27T18:18:12|char-count|2|3|"ABC"
